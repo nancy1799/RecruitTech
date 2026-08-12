@@ -1,0 +1,73 @@
+/* RecruitTech button styles */
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 44px;
+	padding: 0 1.25rem;
+	border: 1px solid transparent;
+	border-radius: 24px;
+	font-weight: 500;
+	font-size: 0.95rem;
+	line-height: 1.1;
+	cursor: pointer;
+	text-decoration: none;
+	transition: transform var(--rt-transition), background var(--rt-transition), border-color var(--rt-transition), color var(--rt-transition), box-shadow var(--rt-transition);
+	outline: none;
+	background: #ffffff;
+	color: var(--rt-text);
+}
+
+.btn:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 8px 20px rgba(17, 24, 39, 0.08);
+}
+
+.btn:focus-visible {
+	outline: 2px solid rgba(10, 102, 194, 0.35);
+	outline-offset: 2px;
+}
+
+.btn-primary {
+	background: var(--rt-primary);
+	color: #ffffff;
+	border-color: var(--rt-primary);
+}
+
+.btn-primary:hover {
+	background: var(--rt-primary-hover);
+	border-color: var(--rt-primary-hover);
+}
+
+.btn-outline-secondary {
+	background: #ffffff;
+	color: var(--rt-text);
+	border-color: var(--rt-border);
+}
+
+.btn-outline-secondary:hover {
+	background: rgba(10, 102, 194, 0.08);
+	border-color: var(--rt-primary);
+	color: var(--rt-primary);
+}
+
+.btn-outline-primary {
+	background: transparent;
+	color: var(--rt-primary);
+	border-color: var(--rt-primary);
+}
+
+.btn-outline-primary:hover {
+	background: rgba(10, 102, 194, 0.08);
+}
+
+.btn-secondary {
+	background: var(--rt-muted);
+	color: #ffffff;
+	border-color: var(--rt-muted);
+}
+
+.btn-secondary:hover {
+	background: #4b5563;
+}
+

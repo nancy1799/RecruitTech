@@ -1,0 +1,64 @@
+/* RecruitTech forms styles */
+.form-control,
+.form-select,
+textarea,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=search] {
+	width: 100%;
+	padding: 0.95rem 1rem;
+	border: 1px solid var(--rt-border);
+	border-radius: 14px;
+	background: #ffffff;
+	color: var(--rt-text);
+	transition: border-color var(--rt-transition), box-shadow var(--rt-transition), background var(--rt-transition);
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus,
+input:focus {
+	outline: none;
+	border-color: var(--rt-primary);
+	box-shadow: 0 0 0 4px rgba(10, 102, 194, 0.16);
+	background: #ffffff;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 0.65rem;
+	font-weight: 600;
+	color: var(--rt-heading);
+}
+
+textarea {
+	min-height: 150px;
+	resize: vertical;
+}
+
+input,
+textarea,
+select {
+	font: inherit;
+}
+
+.form-group {
+	margin-bottom: 1.25rem;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.form-help {
+	margin-top: 0.4rem;
+	font-size: 0.875rem;
+	color: var(--rt-muted);
+}
+

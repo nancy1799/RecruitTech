@@ -1,0 +1,220 @@
+/* ---------------------------------------------------------------
+   RecruitTech Canvas Layout
+   Styles for the full-page canvas template (templates/canvas.php):
+   the shared navbar, the shared footer, and the full-width page
+   layout that replaces the theme's (narrow, centered) content column.
+--------------------------------------------------------------- */
+
+body.recruittech-canvas {
+	margin: 0;
+	background: var(--rt-background);
+}
+
+.recruittech-app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+}
+
+.recruittech-main {
+	flex: 1 1 auto;
+	width: 100%;
+}
+
+/* Widen the Bootstrap containers used throughout the plugin templates
+   (class="container py-4") so pages use the full width of the screen
+   instead of being squeezed into a narrow column. */
+body.recruittech-canvas .container {
+	max-width: min(1400px, calc(100% - 3rem));
+	width: 100%;
+}
+
+body.recruittech-canvas .container-fluid {
+	width: 100%;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+@media (max-width: 640px) {
+	body.recruittech-canvas .container,
+	body.recruittech-canvas .container-fluid {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+/* ---------------------------------------------------------------
+   Navbar
+--------------------------------------------------------------- */
+.rt-navbar {
+	position: sticky;
+	top: 0;
+	z-index: 1030;
+	background: var(--rt-card);
+	border-bottom: 1px solid var(--rt-border);
+	box-shadow: var(--rt-shadow-soft);
+}
+
+body.admin-bar .rt-navbar {
+	top: 32px;
+}
+
+.rt-navbar-inner {
+	padding: 0.65rem 0;
+}
+
+.rt-navbar-container {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.rt-navbar-brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--rt-heading) !important;
+	text-decoration: none;
+}
+
+.rt-navbar-brand i {
+	color: var(--rt-primary);
+}
+
+.rt-navbar-links .nav-link,
+.rt-navbar-actions .nav-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	color: var(--rt-text);
+	font-weight: 500;
+	padding: 0.55rem 0.9rem;
+	border-radius: 999px;
+	transition: background var(--rt-transition), color var(--rt-transition);
+}
+
+.rt-navbar-links .nav-link:hover,
+.rt-navbar-actions .nav-link:hover {
+	background: rgba(10, 102, 194, 0.08);
+	color: var(--rt-primary);
+}
+
+.rt-navbar-cta {
+	background: var(--rt-primary);
+	color: #ffffff !important;
+}
+
+.rt-navbar-cta:hover {
+	background: var(--rt-primary-hover);
+	color: #ffffff !important;
+}
+
+.rt-navbar-notifications {
+	position: relative;
+}
+
+.rt-navbar-badge {
+	background: var(--rt-danger);
+	color: #ffffff;
+	font-size: 0.7rem;
+	margin-left: 0.15rem;
+}
+
+.rt-navbar-username {
+	color: var(--rt-muted);
+	font-weight: 500;
+	padding: 0.55rem 0.5rem;
+}
+
+.rt-navbar-logout {
+	color: var(--rt-danger) !important;
+}
+
+.rt-navbar-logout:hover {
+	background: rgba(209, 17, 36, 0.08) !important;
+}
+
+@media (max-width: 991px) {
+	.rt-navbar-links,
+	.rt-navbar-actions {
+		gap: 0.25rem;
+		padding-top: 0.5rem;
+	}
+}
+
+@media (max-width: 782px) {
+	body.admin-bar .rt-navbar {
+		top: 46px;
+	}
+}
+
+/* ---------------------------------------------------------------
+   Footer
+--------------------------------------------------------------- */
+.rt-footer {
+	background: var(--rt-heading);
+	color: rgba(255, 255, 255, 0.85);
+	margin-top: 2.5rem;
+}
+
+.rt-footer-container {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding-top: 2.25rem;
+	padding-bottom: 1.5rem;
+}
+
+.rt-footer-top {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.rt-footer-brand-mark {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 1.15rem;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.rt-footer-brand p {
+	margin: 0.5rem 0 0;
+	color: rgba(255, 255, 255, 0.65);
+	max-width: 380px;
+}
+
+.rt-footer-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+}
+
+.rt-footer-links a {
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.rt-footer-links a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.rt-footer-bottom {
+	padding-top: 1.25rem;
+	text-align: center;
+}
+
+.rt-footer-bottom p {
+	margin: 0;
+	font-size: 0.875rem;
+	color: rgba(255, 255, 255, 0.55);
+}

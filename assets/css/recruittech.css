@@ -1,0 +1,477 @@
+/* RecruitTech default styles */
+:root {
+	--rt-primary: #0A66C2;
+	--rt-primary-hover: #004182;
+	--rt-success: #057642;
+	--rt-danger: #D11124;
+	--rt-warning: #F59E0B;
+	--rt-background: #F3F2EF;
+	--rt-card: #FFFFFF;
+	--rt-border: #D9D9D9;
+	--rt-text: #434649;
+	--rt-heading: #1D2226;
+	--rt-muted: #6B7280;
+	--rt-radius: 1rem;
+	--rt-card-radius: 1.25rem;
+	--rt-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+	--rt-shadow-soft: 0 6px 18px rgba(17, 24, 39, 0.06);
+	--rt-transition: 200ms ease;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
+	font-size: 16px;
+	background: var(--rt-background);
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	color: var(--rt-text);
+	background: var(--rt-background);
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+
+img, video, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+button, input, select, textarea {
+	font: inherit;
+}
+
+.recruittech-app {
+	min-height: 100vh;
+	background: var(--rt-background);
+	color: var(--rt-text);
+}
+
+.rt-container {
+	width: min(1120px, calc(100% - 2rem));
+	margin: 0 auto;
+	padding: 2.5rem 0;
+}
+
+.recruittech-login-shell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 2rem 1rem;
+}
+
+.recruittech-login-layout {
+	display: grid;
+	grid-template-columns: minmax(320px, 1fr) minmax(320px, 1fr);
+	gap: 2rem;
+	width: min(1200px, 100%);
+	align-items: stretch;
+}
+
+.recruittech-login-branding,
+.recruittech-login-panel {
+	min-height: 100%;
+}
+
+.recruittech-login-panel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Login / registration branding panel (left side) */
+.recruittech-login-branding {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.5rem;
+	padding: 3rem 2.5rem;
+	border-radius: var(--rt-card-radius);
+	background: linear-gradient(135deg, var(--rt-primary) 0%, #004182 100%);
+	color: #ffffff;
+	box-shadow: var(--rt-shadow);
+}
+
+.recruittech-login-brand-mark {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-size: 1.35rem;
+	font-weight: 700;
+}
+
+.recruittech-login-brand-mark i {
+	font-size: 1.6rem;
+}
+
+.recruittech-login-branding h2 {
+	margin: 0;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.recruittech-login-branding p.rt-tagline {
+	margin: 0;
+	font-size: 1.05rem;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.recruittech-login-features {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.9rem;
+}
+
+.recruittech-login-features li {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-size: 0.98rem;
+	color: rgba(255, 255, 255, 0.92);
+}
+
+.recruittech-login-features i {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	flex-shrink: 0;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.16);
+	font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+	.recruittech-login-branding {
+		padding: 2.25rem 1.75rem;
+	}
+}
+
+.recruittech-login-form {
+	width: 100%;
+	max-width: 560px;
+}
+
+@media (max-width: 900px) {
+	.recruittech-login-layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+.card {
+	background: var(--rt-card);
+	border: 1px solid var(--rt-border);
+	border-radius: var(--rt-card-radius);
+	box-shadow: var(--rt-shadow-soft);
+	padding: 1.75rem;
+	transition: transform var(--rt-transition), box-shadow var(--rt-transition);
+}
+
+.card:hover {
+	transform: translateY(-1px);
+	box-shadow: var(--rt-shadow);
+}
+
+.card-body {
+	padding: 0;
+}
+
+.card-title {
+	margin: 0 0 0.85rem;
+	font-weight: 600;
+	color: var(--rt-heading);
+}
+
+.text-muted {
+	color: var(--rt-muted);
+}
+
+.alert {
+	display: block;
+	padding: 1.2rem 1.35rem;
+	border-radius: 1rem;
+	border: 1px solid transparent;
+	margin-bottom: 1.25rem;
+	background: #ffffff;
+	color: var(--rt-text);
+	box-shadow: 0 4px 18px rgba(17, 24, 39, 0.05);
+}
+
+.alert-success {
+	background: #EDF7EE;
+	border-color: rgba(5, 118, 66, 0.18);
+	color: #0F5132;
+}
+
+.alert-danger {
+	background: #FCEEED;
+	border-color: rgba(209, 17, 36, 0.18);
+	color: #7F1D1D;
+}
+
+.alert-warning {
+	background: #FEF6E7;
+	border-color: rgba(245, 158, 11, 0.18);
+	color: #78350F;
+}
+
+.badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.4rem 0.85rem;
+	border-radius: 999px;
+	font-size: 0.8125rem;
+	font-weight: 600;
+	line-height: 1;
+	white-space: nowrap;
+}
+
+.badge-primary {
+	background: rgba(10, 102, 194, 0.12);
+	color: var(--rt-primary);
+	border: 1px solid rgba(10, 102, 194, 0.18);
+}
+
+.badge-success {
+	background: rgba(5, 118, 66, 0.12);
+	color: var(--rt-success);
+	border: 1px solid rgba(5, 118, 66, 0.18);
+}
+
+.badge-danger {
+	background: rgba(209, 17, 36, 0.12);
+	color: var(--rt-danger);
+	border: 1px solid rgba(209, 17, 36, 0.18);
+}
+
+.badge-warning {
+	background: rgba(245, 158, 11, 0.12);
+	color: var(--rt-warning);
+	border: 1px solid rgba(245, 158, 11, 0.18);
+}
+
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	list-style: none;
+	margin: 1.5rem 0 0;
+	padding: 0;
+}
+
+.pagination li {
+	display: inline;
+}
+
+.pagination a,
+.pagination span {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 2.8rem;
+	height: 44px;
+	padding: 0 1rem;
+	border-radius: 24px;
+	border: 1px solid var(--rt-border);
+	background: #ffffff;
+	color: var(--rt-text);
+	text-decoration: none;
+	transition: background var(--rt-transition), border-color var(--rt-transition), color var(--rt-transition), transform var(--rt-transition);
+}
+
+.pagination a:hover {
+	background: rgba(10, 102, 194, 0.08);
+	border-color: var(--rt-primary);
+	color: var(--rt-primary);
+}
+
+.pagination .active span {
+	background: var(--rt-primary);
+	border-color: var(--rt-primary);
+	color: #ffffff;
+}
+
+@media (max-width: 900px) {
+	.rt-container {
+		width: min(100%, calc(100% - 1.5rem));
+		padding: 1.75rem 0;
+	}
+}
+
+@media (max-width: 640px) {
+	.rt-container {
+		padding: 1.25rem 0;
+	}
+	.card {
+		padding: 1.25rem;
+	}
+}
+
+/* ---------------------------------------------------------------
+   Shared "page header" banner used at the top of dashboards,
+   profile pages, browse-jobs and job-details (LinkedIn-style strip)
+--------------------------------------------------------------- */
+.rt-page-header {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--rt-card);
+	border: 1px solid var(--rt-border);
+	border-radius: var(--rt-card-radius);
+	box-shadow: var(--rt-shadow-soft);
+	padding: 1.75rem 2rem;
+	margin-bottom: 1.75rem;
+}
+
+.rt-page-header-title h1,
+.rt-page-header-title h2 {
+	margin: 0 0 0.35rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--rt-heading);
+}
+
+.rt-page-header-title p {
+	margin: 0;
+	color: var(--rt-muted);
+}
+
+.rt-page-header-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+}
+
+/* Round avatar / logo chip with initials, used for companies & job seekers */
+.rt-avatar {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	background: rgba(10, 102, 194, 0.12);
+	color: var(--rt-primary);
+	font-weight: 700;
+	font-size: 1.1rem;
+	flex-shrink: 0;
+	overflow: hidden;
+	border: 1px solid rgba(10, 102, 194, 0.16);
+	box-shadow: 0 10px 24px rgba(10, 102, 194, 0.12);
+}
+
+.rt-avatar img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+}
+
+.rt-avatar-sm {
+	width: 40px;
+	height: 40px;
+	font-size: 0.95rem;
+}
+
+.rt-avatar-lg {
+	width: 96px;
+	height: 96px;
+	font-size: 1.6rem;
+}
+
+.rt-avatar-xl {
+	width: 128px;
+	height: 128px;
+	font-size: 2rem;
+}
+
+.rt-avatar-placeholder {
+	background: rgba(10, 102, 194, 0.08);
+}
+
+.rt-navbar-username {
+	gap: 0.6rem;
+}
+
+.rt-navbar-username-text {
+	font-weight: 600;
+	color: var(--rt-heading);
+}
+
+@media (max-width: 640px) {
+	.rt-page-header {
+		padding: 1.35rem;
+	}
+}
+
+/* RecruitTech Home page */
+.rt-home-shell {
+	padding-top: 1rem;
+}
+
+.rt-home-hero {
+	padding: 1.5rem;
+	border-radius: 1.75rem;
+	background: linear-gradient(135deg, rgba(10, 102, 194, 0.06) 0%, rgba(255, 255, 255, 0.95) 100%);
+	border: 1px solid rgba(10, 102, 194, 0.12);
+	box-shadow: var(--rt-shadow-soft);
+}
+
+.rt-home-visual {
+	background: linear-gradient(135deg, rgba(10, 102, 194, 0.08) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.rt-home-illustration {
+	background: rgba(255, 255, 255, 0.85);
+	border: 1px solid rgba(10, 102, 194, 0.12);
+}
+
+.rt-home-stat .rt-home-stat-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	background: rgba(10, 102, 194, 0.12);
+	color: var(--rt-primary);
+	font-size: 1.2rem;
+}
+
+.rt-home-job:hover,
+.rt-home-stat:hover,
+.rt-home-cta {
+	transform: translateY(-2px);
+}
+
+.rt-home-bullet {
+	width: 40px;
+	height: 40px;
+	background: rgba(10, 102, 194, 0.12);
+	color: var(--rt-primary);
+}
+
+.rt-home-cta {
+	background: linear-gradient(135deg, rgba(10, 102, 194, 0.08) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+@media (max-width: 768px) {
+	.rt-home-hero {
+		padding: 1.25rem;
+	}
+}
+

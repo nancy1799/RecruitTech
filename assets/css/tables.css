@@ -1,0 +1,60 @@
+/* RecruitTech table styles */
+.table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0 0.75rem;
+	background: transparent;
+	color: var(--rt-text);
+}
+
+.table th,
+.table td {
+	padding: 1rem 1.1rem;
+	border: 1px solid transparent;
+	vertical-align: middle;
+	background: #ffffff;
+}
+
+.table thead th {
+	background: transparent;
+	color: var(--rt-heading);
+	font-weight: 600;
+	border-bottom: 1px solid var(--rt-border);
+	padding: 1rem 1.1rem;
+}
+
+.table tbody tr {
+	transition: background var(--rt-transition), transform var(--rt-transition);
+}
+
+.table tbody tr:hover {
+	background: rgba(10, 102, 194, 0.06);
+	transform: translateY(-1px);
+}
+
+.table td.rt-status {
+	font-weight: 600;
+}
+
+.table-responsive {
+	width: 100%;
+	overflow-x: auto;
+	border-radius: 1rem;
+}
+
+.table-responsive::-webkit-scrollbar {
+	height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+	background: rgba(17, 24, 39, 0.16);
+	border-radius: 999px;
+}
+
+@media (max-width: 640px) {
+	.table th,
+	.table td {
+		padding: 0.85rem 0.9rem;
+	}
+}
+

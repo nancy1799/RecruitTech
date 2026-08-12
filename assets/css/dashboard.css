@@ -1,0 +1,88 @@
+/* RecruitTech dashboard styles */
+
+/* Stat cards (Total Jobs / Published / Draft / Deleted, etc.) */
+.card.rounded-4 {
+	border-radius: var(--rt-card-radius) !important;
+}
+
+.card .rounded-circle {
+	width: 48px;
+	height: 48px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.15rem;
+}
+
+.display-6 {
+	font-weight: 700;
+	color: var(--rt-heading);
+}
+
+/* Quick action / tool rows inside dashboards */
+.border.rounded.p-3 {
+	border-color: var(--rt-border) !important;
+	border-radius: 14px !important;
+	transition: border-color var(--rt-transition), background var(--rt-transition);
+}
+
+.border.rounded.p-3:hover {
+	border-color: var(--rt-primary) !important;
+	background: rgba(10, 102, 194, 0.04);
+}
+
+/* Job cards on Browse Jobs */
+.rt-job-card {
+	border-radius: var(--rt-card-radius) !important;
+	border-top: 3px solid var(--rt-primary) !important;
+	transition: transform var(--rt-transition), box-shadow var(--rt-transition);
+}
+
+.rt-job-card:hover {
+	transform: translateY(-3px);
+	box-shadow: var(--rt-shadow);
+}
+
+.rt-job-card .card-title {
+	font-size: 1.1rem;
+}
+
+.rt-job-meta div {
+	padding: 0.15rem 0;
+	color: var(--rt-text);
+}
+
+.rt-job-meta strong {
+	color: var(--rt-heading);
+	font-weight: 600;
+}
+
+/* Notification cards */
+.card.border-0.shadow-sm.rounded-4 .badge.bg-secondary {
+	background: rgba(107, 114, 128, 0.14) !important;
+	color: var(--rt-muted) !important;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+/* Verification status badges on the dashboards */
+.badge.bg-success {
+	background: rgba(5, 118, 66, 0.12) !important;
+	color: var(--rt-success) !important;
+}
+
+.badge.bg-warning {
+	background: rgba(245, 158, 11, 0.14) !important;
+	color: #92620a !important;
+}
+
+.badge.bg-danger {
+	background: rgba(209, 17, 36, 0.12) !important;
+	color: var(--rt-danger) !important;
+}
+
+/* Pagination (Bootstrap page-item/page-link reuse the base .pagination look) */
+.pagination .page-item.disabled .page-link {
+	opacity: 0.45;
+	pointer-events: none;
+}
